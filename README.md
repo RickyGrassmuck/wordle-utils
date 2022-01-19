@@ -1,5 +1,9 @@
 # Wordle Utils
 
+## What is this?
+
+Just a repo with some utilities that are helpful for solving wordle puzzles. Nothing fancy here and more may be added. If you have something that you think would be useful, open a Pull Request!
+
 ## Requirements
 
 - Python 3.6+ 
