@@ -1,4 +1,9 @@
-# wordle-utils
+# Wordle Utils
+
+## Requirements
+
+- Python 3.6+ 
+- That's it!
 
 ## get_heterograms.py
 
