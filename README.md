@@ -6,7 +6,7 @@ Just a repo with some utilities that are helpful for solving wordle puzzles. Not
 
 ## Requirements
 
-- Python 3.6+ 
+- Python 3.6+
 - That's it!
 
 ## get_heterograms.py
@@ -49,4 +49,3 @@ Takes a new-line separated list of words and 1 or more filter definitions (see b
 ```shell
   python3 filter_by_letter_position.py word-lists/heterograms.txt 1:a 3:s
 ```
-
