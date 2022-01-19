@@ -1,7 +1,13 @@
+import os
 import sys
 
+def debug_print(msg):
+  if os.environ.get("DEBUG") is not None:
+    print(f"[DEBUG] {msg}")
+  return
+
 def word_matches_filter(word, filter_list):
-  print(f"Checking for match: {word}")
+  debug_print(f"Checking for match: {word}")
   for i, char in enumerate(filter_list):
     if char is None:
       continue
