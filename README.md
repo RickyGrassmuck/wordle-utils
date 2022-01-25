@@ -7,9 +7,33 @@ Just a repo with some utilities that are helpful for solving wordle puzzles. Not
 ## Requirements
 
 - Python 3.6+
-- That's it!
 
-## get_heterograms.py
+## Setup
+  
+  ```pip3 install click```
+
+## Usage
+
+Takes a new-line separated list of words and 1 or more filter definitions (see below) and returns any words from the provided list that match the filter parameters.
+
+```shell
+Usage: main.py [OPTIONS] [FILTER_STRINGS]...
+
+  Filter words from a word list
+
+  FILTER_STRINGS are strings in the format `pos:char`
+
+  Example: main.py -l answers 1:s 3:a
+
+Options:
+  -e, --exclude TEXT              Exclude results with this string
+  -p, --pager / -np, --no-pager   Use the shells pager when printing output
+  -c, --show-count BOOLEAN
+  -l, --word-list [accepted_guesses|answers|heterograms]
+  --help
+```
+
+## utils/get_heterograms.py
 
 ***Heterogram: A word of phrase in which no letter occurs more than once***
 
@@ -22,30 +46,4 @@ Parameters:
     wordlist_file: Path to the file containing the newline separated list of words to use
     results_file: Path to file where the results will be saved
 
-```
-
-### Example
-
-```shell
-  python3 get_heterograms.py word-lists/wordle.txt word-lists/heterograms.txt
-```
-
-## filter_by_letter_position.py
-
-Takes a new-line separated list of words and 1 or more filter definitions (see below) and returns any words from the provided list that match the filter parameters.
-
-```text
-  Usage:
-    filter_by_letter_position.py wordlist_file [filter]...
-  Parameters:
-    wordlist_file: Path to the file containing the newline separated list of words to filter
-    filter: A string in the format `<pos>:<letter>`. Multiple filter arguments can be provided
-```
-
-### Examples
-
-***find words where the first letter is "a" and the third is "s"***
-
-```shell
-  python3 filter_by_letter_position.py word-lists/heterograms.txt 1:a 3:s
 ```
